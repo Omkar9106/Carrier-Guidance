@@ -100,7 +100,7 @@ export default function Chatbot({ isOpen, onClose }: { isOpen: boolean; onClose:
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-6 right-6 w-96 bg-slate-900 rounded-2xl shadow-xl border border-white/10 overflow-hidden flex flex-col z-50">
+    <div className="fixed bottom-4 inset-x-4 sm:bottom-6 sm:right-6 sm:left-auto w-full sm:w-96 max-w-full bg-slate-900 rounded-2xl shadow-xl border border-white/10 overflow-hidden flex flex-col z-50">
       <div className="bg-slate-800 p-4 flex justify-between items-center">
         <h3 className="font-semibold text-white">AI Assistant</h3>
         <button 
@@ -113,7 +113,7 @@ export default function Chatbot({ isOpen, onClose }: { isOpen: boolean; onClose:
         </button>
       </div>
       
-      <div className="flex-1 p-4 overflow-y-auto max-h-96">
+      <div className="flex-1 p-4 overflow-y-auto max-h-[60vh] sm:max-h-96">
         <div className="space-y-4">
           {messages.map((message, index) => (
             <div 

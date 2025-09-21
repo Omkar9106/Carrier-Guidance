@@ -205,6 +205,38 @@ export default function Header({ activeTab, onTabChange, onOpenQuiz, onOpenChat 
               Progress
             </Link>
             <Link 
+              href="/about"
+              onClick={() => {
+                onTabChange('about');
+                setIsMobileMenuOpen(false);
+              }} 
+              className={`px-3 py-1.5 rounded-md ${activeTab === 'about' ? 'bg-blue-500 text-white' : 'bg-white/5'}`}
+            >
+              About
+            </Link>
+            <Link 
+              href="/ats"
+              onClick={() => {
+                onTabChange('ats');
+                setIsMobileMenuOpen(false);
+              }} 
+              className={`px-3 py-1.5 rounded-md ${activeTab === 'ats' ? 'bg-blue-500 text-white' : 'bg-white/5'}`}
+            >
+              ATS
+            </Link>
+            <button
+              onClick={() => {
+                setIsChatOpen(true);
+                setIsMobileMenuOpen(false);
+              }}
+              className="px-3 py-1.5 rounded-md bg-white/5 hover:bg-white/10 text-white text-sm font-medium transition-colors inline-flex items-center gap-2"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6l-2 2V6h16v10z"/>
+              </svg>
+              AI Assistant
+            </button>
+            <Link 
               href="/profile"
               className="px-3 py-1.5 rounded-md bg-white/5 hover:bg-white/10 text-white text-sm font-medium transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
