@@ -5,6 +5,7 @@ import { auth, db } from '../firebase/config';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 import { FiUser, FiMail, FiBook, FiBriefcase, FiUpload, FiSave, FiPlus, FiX } from 'react-icons/fi';
+import Image from 'next/image';
 
 const QUIZ_DOMAINS = [
   'Frontend Development', 'Backend Development', 'Full Stack Development',
@@ -123,10 +124,13 @@ export default function ProfilePage() {
             <div className="flex flex-col md:flex-row items-center">
               <div className="relative group mb-6 md:mb-0 md:mr-8">
                 <div className="w-32 h-32 rounded-full border-4 border-white/20 overflow-hidden bg-gray-200">
-                  <img
+                  <Image
                     src={imagePreview || profile.profileImage}
                     alt={profile.name || 'Profile'}
+                    width={128}
+                    height={128}
                     className="w-full h-full object-cover"
+                    priority
                   />
                 </div>
                 {isEditing && (

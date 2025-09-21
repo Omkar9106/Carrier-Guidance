@@ -119,7 +119,7 @@ export default function AtsPage() {
               Your ATS Score: <span className="text-blue-400">{score}%</span>
             </h2>
             {score >= 70 ? (
-              <p className="text-green-400 font-medium">✅ Great match! You're ready to apply. 🎉</p>
+              <p className="text-green-400 font-medium">✅ Great match! You&apos;re ready to apply. 🎉</p>
             ) : (
               <p className="text-yellow-400 font-medium">⚠ Improve your resume to better match the job description.</p>
             )}

@@ -143,7 +143,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-slate-900/50 p-8 md:p-12 rounded-2xl border border-slate-800/50 backdrop-blur-sm">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Career?</h2>
-            <p className="text-xl text-slate-300 mb-8">Join thousands of professionals who've accelerated their careers with our AI-powered skill gap analysis.</p>
+            <p className="text-xl text-slate-300 mb-8">Join thousands of professionals who&apos;ve accelerated their careers with our AI-powered skill gap analysis.</p>
             
             {!isSubscribed ? (
               <form onSubmit={handleSubscribe} className="max-w-md mx-auto">
@@ -167,7 +167,7 @@ export default function Home() {
             ) : (
               <div className="bg-green-500/10 p-6 rounded-xl border border-green-500/30">
                 <h3 className="text-xl font-semibold text-green-400 mb-2">Check your email!</h3>
-                <p className="text-slate-300">We've sent your personalized assessment link to <span className="text-white font-medium">{email}</span></p>
+                <p className="text-slate-300">We&apos;ve sent your personalized assessment link to <span className="text-white font-medium">{email}</span></p>
               </div>
             )}
           </div>
